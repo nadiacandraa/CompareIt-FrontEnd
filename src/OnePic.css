@@ -1,0 +1,94 @@
+.grid {
+    list-style-type: none;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+        'image image product product'
+        'image image brand brand'
+        'image image house house';
+    text-align: left;
+    grid-column-gap: 50px;
+    grid-row-gap: 20px;
+    margin-bottom: 15%;
+}
+
+.grid > h2 {
+    grid-area: product;
+    margin-top: 20%;
+    font-size: 150%;
+    text-align: left;
+}
+
+.grid > h4 {
+    grid-area: brand;
+    margin-top: -20%;
+}
+
+.grid > img {
+    grid-area: image;
+    width: 250px;
+}
+
+.grid > a {
+    grid-area: house;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -20%;
+    max-height: 35px;
+}
+
+.col-8 h2{
+    font-size: 3.5em;
+    margin-top: 8%;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .col-8 h2{
+        font-size: 2.3em;
+    }
+    .col-7 h2{
+        font-size: 180%;     
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .grid {
+        display: block;
+    }
+
+    .col-7{
+        padding-bottom: 3%;
+        flex-basis: 45%;
+        list-style: none;
+        flex-basis: fit-content;
+    }
+    
+    .col-7 h2 {
+        margin-top: 0;
+        text-align: center;
+        font-size: 2em;
+        width: 550px;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    .col-7 h4 {
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .col-7 a {
+        margin-top: 10px;
+        margin-left: 32%;
+    }
+    
+    .col-7 img{
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
